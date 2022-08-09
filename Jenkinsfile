@@ -9,7 +9,7 @@ node {
             echo "Deploy to Staging"
             '''
     }
-    stage('Jenkins Credentials | Decrypt API KEY') {
+    stage('Jenkins Credentials1 | Decrypt API KEY') {
       withCredentials([string(credentialsId: '<copied-jenkins-api-id>',
                               variable: 'secretText')]) {
         apiKey = "\nAPI key: ${secretText}\n"
